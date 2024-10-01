@@ -13,22 +13,13 @@ YELLOW='\033[1;33m'
 WHITE='\033[1;37m'
 NC='\033[0m'
 
-checkFolder () {
-  if [ -d "$1" ]
-  then
-    echo -e "Directory ${GREEN}$1${NC} exists."
-  else
-    echo -e "Creating ${GREEN}$1${NC} folder"
-    mkdir $1
-  fi 
-}
-
 echo -e "${PURPLE} _____    ______   _    _   ______   _    _  10${NC}";
 echo -e "${PURPLE}| | \ \  / |  | \ | |  | | | | ____ | |  | |   ${NC}";
 echo -e "${PURPLE}| |  | | | |  | | | |  | | | |  | | | |--| |   ${NC}";
 echo -e "${PURPLE}|_|_/_/  \_|__|_/ \_|__|_| |_|__|_| |_|  |_|   ${NC}";
 echo -e "${WHITE}Clock Installer v:${NC}${GREEN}${version}${NC}";
-echo -e "${PURPLE}                                               ${NC}";
+echo ""
+
 echo -e "${YELLOW}Install Python3 & PIP${NC}"
 sudo apt install python3 python3-pip -y
 echo -e "${GREEN}Python3 & PIP Installed${NC}"
