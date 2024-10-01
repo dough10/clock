@@ -26,10 +26,10 @@ class Clock:
     time.sleep(1)
     
 
-
-try:
-  clock = Clock(5)
-  while True:
-    clock.time()
-except KeyboardInterrupt:
-  clock.clear()
+if __name__ == "__main__":
+  try:
+    clock = Clock(5)
+    while True:
+      clock.time()
+  except KeyboardInterrupt:
+    clock.clear()
