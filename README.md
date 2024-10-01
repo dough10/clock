@@ -8,4 +8,4 @@ I think my plan is to make an over complicated alarm clock that pulls time from 
 
 copy the code below and paste into command line
 
-`curl -O https://gist.githubusercontent.com/dough10/99256d3695a670449dead0106cb9e922/raw/d938eeb52cce602c293bb223c33eadb4abdc8671/clock-install.sh && bash clock-install.sh`
+`curl -O https://gist.githubusercontent.com/dough10/99256d3695a670449dead0106cb9e922/raw/f4275b60e7fd9af2f46e7be1e7e4649a67dcd8a9/clock-install.sh && bash clock-install.sh`
