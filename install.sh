@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-version="0.1"
+version="0.2"
 
 BLACK='\033[0;30m'
 RED='\033[0;31m'
