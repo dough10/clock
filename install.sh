@@ -30,9 +30,9 @@ python3 -m venv ~/.venv
 echo -e "${GREEN}~/.venv created${NC}"
 
 
-echo -e "${YELLOW}Installing python art module${NC}"
+echo -e "${YELLOW}Installing python modules${NC}"
 ~/.venv/bin/python3 -m pip install -r requirments.txt
-echo -e "${GREEN}art module Installed${NC}"
+echo -e "${GREEN}Python modules Installed${NC}"
 
 
 echo -e "${YELLOW}Adding clock command to ~/.bashrc${NC}"
