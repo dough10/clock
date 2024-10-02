@@ -20,8 +20,8 @@ class Clock:
   def time(self):
     now = datetime.now()
     date = f'{now.strftime("%A")}, {now.strftime("%B")} {now.strftime("%d")}, {now.strftime("%Y")}'
-    time = now.strftime("%H:%M:%S")
-    text = f'{date}\n{text2art(time)}'
+    timestr = now.strftime("%H:%M:%S")
+    text = f'{date}\n{text2art(timestr)}'
     self.clear()
     print(text)
     time.sleep(1)
