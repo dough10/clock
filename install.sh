@@ -21,7 +21,7 @@ echo -e "${WHITE}Clock Installer v:${NC}${GREEN}${version}${NC}";
 echo ""
 
 echo -e "${YELLOW}Install Python3 & PIP${NC}"
-sudo apt install python3 python3-pip -y
+sudo apt update && sudo apt install python3 python3-pip -y
 echo -e "${GREEN}Python3 & PIP Installed${NC}"
 
 
