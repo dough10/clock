@@ -21,7 +21,7 @@ echo -e "${WHITE}Clock Installer v:${NC}${GREEN}${version}${NC}";
 echo ""
 
 echo -e "${YELLOW}Install Python3 & PIP${NC}"
-sudo apt update && sudo apt install python3 python3-pip -y
+sudo apt update && sudo apt install python3 python3-pip python3.12-venv -y
 echo -e "${GREEN}Python3 & PIP Installed${NC}"
 
 
@@ -31,7 +31,7 @@ echo -e "${GREEN}~/.venv created${NC}"
 
 
 echo -e "${YELLOW}Installing python art module${NC}"
-~/.venv/bin/python3 -m pip install art
+~/.venv/bin/python3 -m pip install -r requirments.txt
 echo -e "${GREEN}art module Installed${NC}"
 
 
