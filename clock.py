@@ -28,7 +28,7 @@ class Clock:
 
 if __name__ == "__main__":
   try:
-    clock = Clock(5)
+    clock = Clock(3)
     while True:
       clock.time()
   except KeyboardInterrupt:
