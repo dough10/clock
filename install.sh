@@ -1,5 +1,5 @@
 #!/bin/bash
-set
+set -e
 version="0.2"
 
 BLACK='\033[0;30m'
