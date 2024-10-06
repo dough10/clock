@@ -22,20 +22,27 @@ echo "${WHITE}Clock Installer v:${NC}${GREEN}${version}${NC}";
 echo ""
 
 echo "${YELLOW}Install Python3 & PIP${NC}"
-sudo apt update && sudo apt install python3 python3-pip -y
+sudo apt update && sudo apt install git python3 python3-pip -y
 echo "${GREEN}Python3 & PIP Installed${NC}"
 
+echo "${YELLOW}Clone Github repo${NC}"
+git clone https://github.com/dough10/clock
+echo "${GREEN}Github repo cloned${NC}"
 
 echo "${YELLOW}Setup virtual enviroment${NC}"
-python3 -m venv ~/.venv
-echo "${GREEN}~/.venv created${NC}"
+python3 -m venv ~/clock/.venv
+echo "${GREEN}~/clock/.venv created${NC}"
 
 
 echo "${YELLOW}Installing python modules${NC}"
-~/.venv/bin/python3 -m pip install -r requirments.txt
+~/clock/.venv/bin/python3 -m pip install -r requirments.txt
 echo "${GREEN}Python modules Installed${NC}"
 
 
 echo "${YELLOW}Adding clock command to ~/.bashrc${NC}"
-echo '~/.venv/bin/python3 ~/clock/clock.py' >> ~/.bashrc
+echo '~/clock/.venv/bin/python3 ~/clock/clock.py' >> ~/.bashrc
 echo "${GREEN}Clock command added to ~/.bashrc${NC}"
+
+echo "${YELLOW}Cleaning up install${NC}"
+rm ~/install.sh
+echo "${GREEN}Install complete${NC}"
