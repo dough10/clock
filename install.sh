@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-version="0.2"
+version="0.3"
 
 BLACK='\033[0;30m'
 RED='\033[0;31m'
@@ -23,24 +23,24 @@ echo -e ""
 
 echo -e "${YELLOW}Install Dependencies${NC}"
 sudo apt update && sudo apt install git python3 python3-pip -y
-echo -e "${GREEN}Dependencies Installed${NC}"
+echo -e "${YELLOW}Dependencies Installed${NC}"
 
 echo -e "${YELLOW}Clone Github repo${NC}"
 git clone https://github.com/dough10/clock
-echo -e "${GREEN}Github repo cloned${NC}"
+echo -e "${YELLOW}Github repo cloned${NC}"
 
 echo -e "${YELLOW}Setup virtual enviroment${NC}"
 python3 -m venv ~/clock/.venv
-echo -e "${GREEN}~/clock/.venv created${NC}"
+echo -e "${YELLOW}~/clock/.venv created${NC}"
 
 
 echo -e "${YELLOW}Installing python modules${NC}"
 ~/clock/.venv/bin/python3 -m pip install -r ~/clock/requirments.txt
-echo -e "${GREEN}Python modules Installed${NC}"
+echo -e "${YELLOW}Python modules Installed${NC}"
 
 
 echo -e "${YELLOW}Adding clock command to ~/.bashrc${NC}"
 echo -e '~/clock/.venv/bin/python3 ~/clock/clock.py' >> ~/.bashrc
-echo -e "${GREEN}Clock command added to ~/.bashrc${NC}"
+echo -e "${YELLOW}Clock command added to ~/.bashrc${NC}"
 
-echo -e "${GREEN}Install complete${NC}"
+echo -e "${YELLOW}Install complete${NC}"
