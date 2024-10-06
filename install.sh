@@ -43,6 +43,4 @@ echo "${YELLOW}Adding clock command to ~/.bashrc${NC}"
 echo '~/clock/.venv/bin/python3 ~/clock/clock.py' >> ~/.bashrc
 echo "${GREEN}Clock command added to ~/.bashrc${NC}"
 
-echo "${YELLOW}Cleaning up install${NC}"
-rm ~/install.sh
 echo "${GREEN}Install complete${NC}"
