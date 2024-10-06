@@ -35,7 +35,7 @@ echo -e "${GREEN}~/clock/.venv created${NC}"
 
 
 echo -e "${YELLOW}Installing python modules${NC}"
-~/clock/.venv/bin/python3 -m pip install -r requirments.txt
+~/clock/.venv/bin/python3 -m pip install -r ~/clock/requirments.txt
 echo -e "${GREEN}Python modules Installed${NC}"
 
 
