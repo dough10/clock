@@ -14,33 +14,33 @@ YELLOW='\033[1;33m'
 WHITE='\033[1;37m'
 NC='\033[0m'
 
-echo "${PURPLE} _____    ______   _    _   ______   _    _  10${NC}";
-echo "${PURPLE}| | \ \  / |  | \ | |  | | | | ____ | |  | |   ${NC}";
-echo "${PURPLE}| |  | | | |  | | | |  | | | |  | | | |--| |   ${NC}";
-echo "${PURPLE}|_|_/_/  \_|__|_/ \_|__|_| |_|__|_| |_|  |_|   ${NC}";
-echo "${WHITE}Clock Installer v:${NC}${GREEN}${version}${NC}";
-echo ""
+echo -e "${PURPLE} _____    ______   _    _   ______   _    _  10${NC}";
+echo -e "${PURPLE}| | \ \  / |  | \ | |  | | | | ____ | |  | |   ${NC}";
+echo -e "${PURPLE}| |  | | | |  | | | |  | | | |  | | | |--| |   ${NC}";
+echo -e "${PURPLE}|_|_/_/  \_|__|_/ \_|__|_| |_|__|_| |_|  |_|   ${NC}";
+echo -e "${WHITE}Clock Installer v:${NC}${GREEN}${version}${NC}";
+echo -e ""
 
-echo "${YELLOW}Install Python3 & PIP${NC}"
+echo -e "${YELLOW}Install Python3 & PIP${NC}"
 sudo apt update && sudo apt install git python3 python3-pip -y
-echo "${GREEN}Python3 & PIP Installed${NC}"
+echo -e "${GREEN}Python3 & PIP Installed${NC}"
 
-echo "${YELLOW}Clone Github repo${NC}"
+echo -e "${YELLOW}Clone Github repo${NC}"
 git clone https://github.com/dough10/clock
-echo "${GREEN}Github repo cloned${NC}"
+echo -e "${GREEN}Github repo cloned${NC}"
 
-echo "${YELLOW}Setup virtual enviroment${NC}"
+echo -e "${YELLOW}Setup virtual enviroment${NC}"
 python3 -m venv ~/clock/.venv
-echo "${GREEN}~/clock/.venv created${NC}"
+echo -e "${GREEN}~/clock/.venv created${NC}"
 
 
-echo "${YELLOW}Installing python modules${NC}"
+echo -e "${YELLOW}Installing python modules${NC}"
 ~/clock/.venv/bin/python3 -m pip install -r requirments.txt
-echo "${GREEN}Python modules Installed${NC}"
+echo -e "${GREEN}Python modules Installed${NC}"
 
 
-echo "${YELLOW}Adding clock command to ~/.bashrc${NC}"
-echo '~/clock/.venv/bin/python3 ~/clock/clock.py' >> ~/.bashrc
-echo "${GREEN}Clock command added to ~/.bashrc${NC}"
+echo -e "${YELLOW}Adding clock command to ~/.bashrc${NC}"
+echo -e '~/clock/.venv/bin/python3 ~/clock/clock.py' >> ~/.bashrc
+echo -e "${GREEN}Clock command added to ~/.bashrc${NC}"
 
-echo "${GREEN}Install complete${NC}"
+echo -e "${GREEN}Install complete${NC}"
