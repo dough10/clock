@@ -21,9 +21,9 @@ echo -e "${PURPLE}|_|_/_/  \_|__|_/ \_|__|_| |_|__|_| |_|  |_|   ${NC}";
 echo -e "${WHITE}Clock Installer v:${NC}${GREEN}${version}${NC}";
 echo -e ""
 
-echo -e "${YELLOW}Install Python3 & PIP${NC}"
+echo -e "${YELLOW}Install Dependencies${NC}"
 sudo apt update && sudo apt install git python3 python3-pip -y
-echo -e "${GREEN}Python3 & PIP Installed${NC}"
+echo -e "${GREEN}Dependencies Installed${NC}"
 
 echo -e "${YELLOW}Clone Github repo${NC}"
 git clone https://github.com/dough10/clock
