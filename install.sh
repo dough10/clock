@@ -23,6 +23,9 @@ echo -e ""
 
 echo -e "${YELLOW}Install Dependencies${NC}"
 sudo apt update && sudo apt install git python3 python3-pip -y
+if ! sudo apt install python3.12-venv -y; then
+    echo -e "${RED}Warning: python3.12-venv installation failed. Continuing with the script...${NC}"
+fi
 echo -e "${YELLOW}Dependencies Installed${NC}"
 
 echo -e "${YELLOW}Clone Github repo${NC}"
@@ -39,6 +42,7 @@ echo -e "${YELLOW}Installing python modules${NC}"
 echo -e "${YELLOW}Python modules Installed${NC}"
 
 
+cp  ~/.bashrc  ~/.bashrc-backup 
 echo -e "${YELLOW}Adding clock command to ~/.bashrc${NC}"
 echo -e '~/clock/.venv/bin/python3 ~/clock/clock.py' >> ~/.bashrc
 echo -e "${YELLOW}Clock command added to ~/.bashrc${NC}"
