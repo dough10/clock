@@ -36,15 +36,14 @@ echo -e "${YELLOW}Setup virtual enviroment${NC}"
 python3 -m venv ~/clock/.venv
 echo -e "${YELLOW}~/clock/.venv created${NC}"
 
-
 echo -e "${YELLOW}Installing python modules${NC}"
 ~/clock/.venv/bin/python3 -m pip install -r ~/clock/requirments.txt
 echo -e "${YELLOW}Python modules Installed${NC}"
 
-
+echo -e "${YELLOW}Backing up ~/.bashrc to ~/.bashrc-backup${NC}"
 cp  ~/.bashrc  ~/.bashrc-backup 
+
 echo -e "${YELLOW}Adding clock command to ~/.bashrc${NC}"
 echo -e '~/clock/.venv/bin/python3 ~/clock/clock.py' >> ~/.bashrc
-echo -e "${YELLOW}Clock command added to ~/.bashrc${NC}"
 
 echo -e "${YELLOW}Install complete${NC}"
