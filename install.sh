@@ -23,8 +23,10 @@ echo -e ""
 
 echo -e "${YELLOW}Install Dependencies${NC}"
 sudo apt update && sudo apt install git python3 python3-pip -y
-if ! sudo apt install python3.12-venv -y; then
-    echo -e "${RED}Warning: python3.12-venv installation failed. Continuing with the script...${NC}"
+PYTHON_VERSION=$(python3 --version | awk '{print $2}' | cut -d. -f1-2)
+PYTHON_VENV_PACKAGE="python${PYTHON_VERSION}-venv"
+if ! sudo apt install "$PYTHON_VENV_PACKAGE" -y; then
+    echo -e "${RED}Warning: ${PYTHON_VENV_PACKAGE} installation failed. Continuing with the script...${NC}"
 fi
 echo -e "${YELLOW}Dependencies Installed${NC}"
 
