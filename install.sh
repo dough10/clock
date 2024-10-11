@@ -48,4 +48,5 @@ cp  ~/.bashrc  ~/.bashrc-backup
 echo -e "${YELLOW}Adding clock command to ~/.bashrc${NC}"
 echo -e '~/clock/.venv/bin/python3 ~/clock/clock.py' >> ~/.bashrc
 
+sudo dpkg-reconfigure tzdata
 echo -e "${YELLOW}Install complete${NC}"
